@@ -175,4 +175,50 @@
            END-IF.
           
            CLOSE FD-TEACHER.
+     
+       MENU-TEACHER.
+           DISPLAY WS-BLANK.
+           DISPLAY '**************************************'.
+           DISPLAY '*                                    *'.
+           DISPLAY '*          TEACHERS MENU             *'.
+           DISPLAY '*                                    *'.
+           DISPLAY '*  => [A]   INPUT STUDENT DATA       *'.
+           DISPLAY '*  => [B]   SEARCH STUDENT           *'.
+           DISPLAY '*  => [C]   LIST STUDENTS            *'.
+           DISPLAY '*  => [ANY] EXIT                     *'.
+           DISPLAY '*                                    *'.
+           DISPLAY '**************************************'.
+           DISPLAY '                                      '.
+           DISPLAY '       CHOOSE AN OPERATION: ' .
+           ACCEPT WS-MENU.
+
+
+           IF A
+              GO TO STUDENT-DATA
+           ELSE IF B
+              STOP RUN
+           ELSE IF C
+              STOP RUN
+           ELSE
+              GO TO PARA-MENU
+           END-IF.
+
+       STUDENT-DATA.
+           DISPLAY "ENTER STUDENT NUMBER".
+           ACCEPT WS-STUDNUMBER.
+           DISPLAY "ENTER STUDENT NAME".
+           ACCEPT WS-STUDNAME.
+           DISPLAY "ENTER STUDENT SECTION".
+           ACCEPT WS-STUDSECT.
+           DISPLAY "ENTER MODULE NUMBER".
+           ACCEPT WS-MODULENUMB.
+           DISPLAY "ENTER MODULE GRADE".
+           ACCEPT WS-GRADE.
+
+           OPEN OUTPUT FD-STUDENT
+               WRITE F-STUDENTINFO
+           CLOSE FD-STUDENT.
+
+           DISPLAY "STUDENT DATA HAS BEEN RECORDED".
+           GO TO MENU-TEACHER.
            
