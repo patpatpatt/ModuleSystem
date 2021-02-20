@@ -61,7 +61,7 @@
            DISPLAY '*                                    *'.
            DISPLAY '**************************************'.
            DISPLAY '                                      '.
-           DISPLAY '       CHOOSE AN OPERATION: ' .  
+           DISPLAY '       CHOOSE AN OPERATION: ' WITH NO ADVANCING.
            ACCEPT WS-MENU.
            
            IF A
@@ -81,10 +81,10 @@
            DISPLAY '*                                    *'.
            DISPLAY '*        ADMINISTRATOR LOGIN         *'.
            DISPLAY '*                                    *'.
-           DISPLAY '*  USERNAME: ' .
+           DISPLAY '*  USERNAME: ' WITH NO ADVANCING.
            ACCEPT WS-ADMINUSERNAME. 
-           DISPLAY '*  PASSWORD: ' .
-           ACCEPT WS-ADMINPASSWORD. 
+           DISPLAY '*  PASSWORD: ' WITH NO ADVANCING.
+           ACCEPT WS-ADMINPASSWORD.
            DISPLAY '*                                    *'.
            DISPLAY '**************************************'.
            
@@ -107,7 +107,7 @@
            DISPLAY '*                                    *'.
            DISPLAY '**************************************'.
            DISPLAY '                                      '.
-           DISPLAY '       CHOOSE AN OPERATION: ' .  
+           DISPLAY '       CHOOSE AN OPERATION: 'WITH NO ADVANCING.
            ACCEPT WS-MENU.
            
            IF A
@@ -147,9 +147,9 @@
            DISPLAY '*                                    *'.
            DISPLAY '*        TEACHER LOGIN PORTAL        *'.
            DISPLAY '*                                    *'.
-           DISPLAY '*  USERNAME: ' .
+           DISPLAY '*  USERNAME: ' WITH NO ADVANCING.
            ACCEPT F-USERNAME. 
-           DISPLAY '*  PASSWORD: ' .
+           DISPLAY '*  PASSWORD: ' WITH NO ADVANCING.
            ACCEPT WS-PASSWORD-TEMP. 
            DISPLAY '*                                    *'.
            DISPLAY '**************************************'.
